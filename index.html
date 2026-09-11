@@ -1,705 +1,638 @@
 <!DOCTYPE html>
-<html lang="en-US">
+<html lang="en" data-theme="dark">
 
 <head>
-  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Ayoub EL HASSANI — Senior Software Engineer | Backend &amp; Distributed Systems | Node.js, TypeScript, NestJS, Elasticsearch | Data Engineering &amp; AI</title>
+  <meta name="description" content="Ayoub EL HASSANI — Senior Software Engineer specialising in backend and distributed systems: Node.js, TypeScript, NestJS and Elasticsearch, with a focus on data engineering and AI. Building data-intensive platforms since 2019. Based in Meknes, Morocco.">
+  <meta name="author" content="Ayoub EL HASSANI">
+  <meta name="theme-color" content="#08090c">
+  <link rel="canonical" href="https://ayoubelhassani.me/">
+
+  <meta property="og:type" content="profile">
+  <meta property="og:title" content="Ayoub EL HASSANI — Senior Software Engineer">
+  <meta property="og:description" content="Backend &amp; Distributed Systems · Node.js, TypeScript, NestJS, Elasticsearch · Data Engineering &amp; AI. Building data-intensive platforms since 2019.">
+  <meta property="og:url" content="https://ayoubelhassani.me/">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:creator" content="@ayoub_el14430">
+
+  <link rel="shortcut icon" href="favicon.jpg">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+  <link href="styles/main.css" rel="stylesheet">
+
+  <script>
+    // Apply the stored theme before first paint to avoid a flash of the wrong palette.
+    (function () {
+      try {
+        var t = localStorage.getItem('theme');
+        if (t === 'light' || t === 'dark') document.documentElement.setAttribute('data-theme', t);
+      } catch (e) { /* storage unavailable */ }
+    })();
+  </script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Ayoub EL HASSANI",
+    "jobTitle": "Senior Software Engineer",
+    "email": "mailto:ayelhassani@gmail.com",
+    "url": "https://ayoubelhassani.me/",
+    "address": { "@type": "PostalAddress", "addressLocality": "Meknes", "addressCountry": "MA" },
+    "knowsLanguage": ["English", "French", "Arabic"],
+    "knowsAbout": ["Backend Engineering", "Distributed Systems", "Node.js", "TypeScript", "NestJS", "Elasticsearch", "Data Engineering", "Artificial Intelligence"],
+    "sameAs": [
+      "https://github.com/ayoublind",
+      "https://www.linkedin.com/in/ayoub-el-hassani-a319a2b9/",
+      "https://x.com/ayoub_el14430"
+    ]
+  }
+  </script>
+
+  <!-- Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=UA-153143837-1"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
     function gtag() { dataLayer.push(arguments); }
     gtag('js', new Date());
-
     gtag('config', 'UA-153143837-1');
   </script>
-
-  <meta charset="UTF-8">
-  <link rel="shortcut icon" href="favicon.jpg">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Ayoub EL HASSANI - FullStack Developer</title>
-  <meta name="description" content="Ayoub EL HASSANI - FullStack Developer based on morocco" />
-  <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700,200" rel="stylesheet">
-  <link href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css" rel="stylesheet">
-  <link href="css/aos.css" rel="stylesheet">
-  <link href="css/bootstrap.min.css" rel="stylesheet">
-  <link href="styles/main.css" rel="stylesheet">
 </head>
 
-<body id="top">
-  <header>
-    <div class="profile-page sidebar-collapse">
-      <nav class="navbar navbar-expand-lg fixed-top navbar-transparent bg-primary" color-on-scroll="400">
-        <div class="container">
-          <div class="navbar-translate"><a class="navbar-brand" href="#" rel="tooltip">A. ELHASSANI</a>
-            <button class="navbar-toggler navbar-toggler" type="button" data-toggle="collapse" data-target="#navigation"
-              aria-controls="navigation" aria-expanded="false" aria-label="Toggle navigation"><span
-                class="navbar-toggler-bar bar1"></span><span class="navbar-toggler-bar bar2"></span><span
-                class="navbar-toggler-bar bar3"></span></button>
-          </div>
-          <div class="collapse navbar-collapse justify-content-end" id="navigation">
-            <ul class="navbar-nav">
-              <li class="nav-item"><a class="nav-link smooth-scroll" href="#about">About</a></li>
-              <li class="nav-item"><a class="nav-link smooth-scroll" href="#skill">Skills</a></li>
-              <li class="nav-item"><a class="nav-link smooth-scroll" href="#portfolio">Portfolio</a></li>
-              <li class="nav-item"><a class="nav-link smooth-scroll" href="#experience">Experience</a></li>
-              <li class="nav-item"><a class="nav-link smooth-scroll" href="#contact">Contact</a></li>
-            </ul>
-          </div>
-        </div>
-      </nav>
-    </div>
-  </header>
-  <div class="page-content">
-    <div>
-      <div class="profile-page">
-        <div class="wrapper">
-          <div class="page-header page-header-small" filter-color="green">
-            <div class="page-header-image" data-parallax="true" style="background-image: url('images/intro-bg.jpg');">
-            </div>
-            <div class="container">
-              <div class="content-center">
-                <div class="cc-profile-image"><a href="#"><img src="images/ayoub-el-hassani.png" alt="Image" /></a>
-                </div>
-                <div class="h2 title">Ayoub EL HASSANI</div>
-                <p class="category text-white">Software Engineer, Android, Java/JEE, JavaScript/NodeJS ...</p>
-                <a class="btn btn-primary smooth-scroll mr-2" href="#contact" data-aos="zoom-in"
-                  data-aos-anchor="data-aos-anchor">Hire Me</a>
-              </div>
-            </div>
-            <div class="section">
-              <div class="container">
-                <div class="button-container">
-                  <a class="btn btn-default btn-round btn-lg btn-icon" target="_blank"
-                    href="https://www.facebook.com/ayoub.elhassani.18" rel="tooltip" title="Follow me on Facebook">
-                    <i class="fa fa-facebook"></i>
-                  </a>
-                  <a class="btn btn-default btn-round btn-lg btn-icon" target="_blank"
-                    href="https://twitter.com/AyoubTec" rel="tooltip" title="Follow me on Twitter">
-                    <i class="fa fa-twitter"></i>
-                  </a>
-                  <a class="btn btn-default btn-round btn-lg btn-icon" target="_blank"
-                    href="https://www.linkedin.com/in/ayoub-elhassani-a319a2b9/" rel="tooltip"
-                    title="Follow me on Linkedin">
-                    <i class="fa fa-linkedin"></i>
-                  </a>
-                  <a class="btn btn-default btn-round btn-lg btn-icon" target="_blank"
-                    href="https://www.instagram.com/ayelhassani" rel="tooltip" title="Follow me on Instagram"><i
-                      class="fa fa-instagram"></i></a>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <div class="scroll-progress" aria-hidden="true"><span id="scrollBar"></span></div>
 
-      <!-- section about -->
-
-      <div class="section" id="about">
-        <div class="container">
-          <div class="card" data-aos="fade-up" data-aos-offset="10">
-            <div class="row">
-              <div class="col-lg-6 col-md-12">
-                <div class="card-body">
-                  <div class="h4 mt-0 title">About</div>
-                  <p>Hello! I am Ayoub EL HASSANI. Software Engineer and a FullStack Developer.</p>
-                  <p>I have a Master degree in Software Engineering and Information
-                    Systems in <a target="_blank" href="http://fsa.ac.ma/">FSA-Ibn Zohr</a>. Indeed during my Higher
-                    Study I loved the field of computer science but especially the development side (Programming), as
-                    well as the thing I really liked was things i built with JAVA, JS and NodeJS.
-                    In a few words:
-                    - BigData, ELK, Mongo, Java, NodeJS, JS, VueJS, Scene Builder, J2EE, SpingBoot ....
-                    - Reason, seriousness, sense of responsibility.
-                    - Organization of business, new technology, computer science ..... <a
-                      href="https://www.linkedin.com/in/ayoub-elhassani-a319a2b9/" target="_blank">Learn More</a>
-                  </p>
-                </div>
-              </div>
-              <div class="col-lg-6 col-md-12">
-                <div class="card-body">
-                  <div class="h4 mt-0 title">Basic Information</div>
-                  <div class="row">
-                    <div class="col-sm-4"><strong class="text-uppercase">Age:</strong></div>
-                    <div class="col-sm-8">Old enough 🧑🏻</div>
-                  </div>
-                  <div class="row mt-3">
-                    <div class="col-sm-4"><strong class="text-uppercase">Email:</strong></div>
-                    <div class="col-sm-8">ayoblind@gmail.com</div>
-                  </div>
-                  <div class="row mt-3">
-                    <div class="col-sm-4"><strong class="text-uppercase">Phone:</strong></div>
-                    <div class="col-sm-8">+2126 53 86 15 11</div>
-                  </div>
-                  <div class="row mt-3">
-                    <div class="col-sm-4"><strong class="text-uppercase">Address:</strong></div>
-                    <div class="col-sm-8"> Meknes, MA</div>
-                  </div>
-                  <div class="row mt-3">
-                    <div class="col-sm-4"><strong class="text-uppercase">Language:</strong></div>
-                    <div class="col-sm-8">English, French, Arabic</div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-
-      <!-- section skills -->
-
-      <div class="section" id="skill">
-        <div class="container">
-          <div class="h4 text-center mb-4 title">Professional Skills</div>
-          <div class="card" data-aos="fade-up" data-aos-anchor-placement="top-bottom">
-            <div class="card-body">
-              <div class="row">
-                <div class="col-md-6">
-                  <div class="progress-container progress-primary"><span class="progress-badge">Android, Hybrid, Native
-                      ...</span>
-                    <div class="progress">
-                      <div class="progress-bar progress-bar-primary" data-aos="progress-full" data-aos-offset="10"
-                        data-aos-duration="2000" role="progressbar" aria-valuenow="60" aria-valuemin="0"
-                        aria-valuemax="100" style="width: 80%;"></div><span class="progress-value">80%</span>
-                    </div>
-                  </div>
-                </div>
-                <div class="col-md-6">
-                  <div class="progress-container progress-primary"><span class="progress-badge">BigData, ELK, MongoDB,
-                      NEST, TS ..</span>
-                    <div class="progress">
-                      <div class="progress-bar progress-bar-primary" data-aos="progress-full" data-aos-offset="10"
-                        data-aos-duration="2000" role="progressbar" aria-valuenow="60" aria-valuemin="0"
-                        aria-valuemax="100" style="width: 70%;"></div><span class="progress-value">75%</span>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="row">
-                <div class="col-md-6">
-                  <div class="progress-container progress-primary"><span class="progress-badge">JS, React,
-                      VueJS, HTML, CSS ...</span>
-                    <div class="progress">
-                      <div class="progress-bar progress-bar-primary" data-aos="progress-full" data-aos-offset="10"
-                        data-aos-duration="2000" role="progressbar" aria-valuenow="60" aria-valuemin="0"
-                        aria-valuemax="100" style="width: 55%;"></div><span class="progress-value">60%</span>
-                    </div>
-                  </div>
-                </div>
-                <div class="col-md-6">
-                  <div class="progress-container progress-primary"><span class="progress-badge">UML, Merise ..</span>
-                    <div class="progress">
-                      <div class="progress-bar progress-bar-primary" data-aos="progress-full" data-aos-offset="10"
-                        data-aos-duration="2000" role="progressbar" aria-valuenow="60" aria-valuemin="0"
-                        aria-valuemax="100" style="width: 75%;"></div><span class="progress-value">75%</span>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="row">
-                <div class="col-md-6">
-                  <div class="progress-container progress-primary"><span class="progress-badge">Data Structure, C,
-                      Python ..</span>
-                    <div class="progress">
-                      <div class="progress-bar progress-bar-primary" data-aos="progress-full" data-aos-offset="10"
-                        data-aos-duration="2000" role="progressbar" aria-valuenow="60" aria-valuemin="0"
-                        aria-valuemax="100" style="width: 60%;"></div><span class="progress-value">60%</span>
-                    </div>
-                  </div>
-                </div>
-                <div class="col-md-6">
-                  <div class="progress-container progress-primary"><span class="progress-badge">Photoshop,
-                      Illustrator</span>
-                    <div class="progress">
-                      <div class="progress-bar progress-bar-primary" data-aos="progress-full" data-aos-offset="10"
-                        data-aos-duration="2000" role="progressbar" aria-valuenow="60" aria-valuemin="0"
-                        aria-valuemax="100" style="width: 40%;"></div><span class="progress-value">40%</span>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- portfolio section -->
-
-      <div class="section" id="portfolio">
-        <div class="container">
-          <div class="row">
-            <div class="col-md-6 ml-auto mr-auto">
-              <div class="h4 text-center mb-4 title">Portfolio (Computer skills)</div>
-              <div class="nav-align-center">
-                <ul class="nav nav-pills nav-pills-primary" role="tablist">
-                  <li class="nav-item">
-                    <a class="nav-link active" data-toggle="tab" href="#web-development" role="tablist">
-                      <i class="fa fa-laptop" aria-hidden="true"></i>
-                    </a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" data-toggle="tab" href="#android-dev" role="tablist">
-                      <i class="fa fa-android" aria-hidden="true"></i>
-                    </a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" data-toggle="tab" href="#data-structure" role="tablist">
-                      <i class="fa fa-code" aria-hidden="true"></i>
-                    </a>
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </div>
-          <div class="tab-content gallery mt-5">
-            <div class="tab-pane active" id="web-development">
-              <div class="ml-auto mr-auto">
-                <div class="row">
-                  <div class="col-md-6">
-                    <div class="cc-porfolio-image img-raised" data-aos="fade-up" data-aos-anchor-placement="top-bottom">
-                      <a href="#web-development">
-                        <figure class="cc-effect"><img src="images/bmd-cover.jpg" alt="Image" />
-                          <figcaption>
-                            <div class="h4">Materialize, Bootstrap</div>
-                            <p>Web Development</p>
-                          </figcaption>
-                        </figure>
-                      </a>
-                    </div>
-                  </div>
-                  <div class="col-md-6">
-                    <div class="cc-porfolio-image img-raised" data-aos="fade-up" data-aos-anchor-placement="top-bottom">
-                      <a href="#web-development">
-                        <figure class="cc-effect"><img src="images/spring.png" alt="Image" />
-                          <figcaption>
-                            <div class="h4">Spring, Hibernate</div>
-                            <p>Web Development</p>
-                          </figcaption>
-                        </figure>
-                      </a>
-                    </div>
-                    <div class="cc-porfolio-image img-raised" data-aos="fade-up" data-aos-anchor-placement="top-bottom">
-                      <a href="#web-development">
-                        <figure class="cc-effect"><img src="images/danguu.jpg" alt="Image" />
-                          <figcaption>
-                            <div class="h4">Angular5, React, VueJS</div>
-                            <p>Web Development</p>
-                          </figcaption>
-                        </figure>
-                      </a>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div class="tab-pane" id="android-dev" role="tabpanel">
-              <div class="ml-auto mr-auto">
-                <div class="row">
-                  <div class="col-md-6">
-                    <div class="cc-porfolio-image img-raised" data-aos="fade-up" data-aos-anchor-placement="top-bottom">
-                      <a href="#android-dev">
-                        <figure class="cc-effect"><img src="images/vision.png" alt="Image" />
-                          <figcaption>
-                            <div class="h4">Mobile Vision</div>
-                            <p>Android Development</p>
-                          </figcaption>
-                        </figure>
-                      </a>
-                    </div>
-                    <div class="cc-porfolio-image img-raised" data-aos="fade-up" data-aos-anchor-placement="top-bottom">
-                      <a href="#android-dev">
-                        <figure class="cc-effect"><img src="images/gcp.jpg" alt="Image" />
-                          <figcaption>
-                            <div class="h4">Google Cloud Natural Language API</div>
-                            <p>Android Development</p>
-                          </figcaption>
-                        </figure>
-                      </a>
-                    </div>
-                  </div>
-                  <div class="col-md-6">
-                    <div class="cc-porfolio-image img-raised" data-aos="fade-up" data-aos-anchor-placement="top-bottom">
-                      <a href="#android-dev">
-                        <figure class="cc-effect"><img src="images/Tensorflow.png" alt="Image" />
-                          <figcaption>
-                            <div class="h4">Tensorflow</div>
-                            <p>Android Development</p>
-                          </figcaption>
-                        </figure>
-                      </a>
-                    </div>
-                    <div class="cc-porfolio-image img-raised" data-aos="fade-up" data-aos-anchor-placement="top-bottom">
-                      <a href="#android-dev">
-                        <figure class="cc-effect"><img src="images/firebase.png" alt="Image" />
-                          <figcaption>
-                            <div class="h4">Firebase</div>
-                            <p>Android Development</p>
-                          </figcaption>
-                        </figure>
-                      </a>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div class="tab-pane" id="data-structure" role="tabpanel">
-              <div class="ml-auto mr-auto">
-                <div class="row">
-                  <div class="col-md-6">
-                    <div class="cc-porfolio-image img-raised" data-aos="fade-up" data-aos-anchor-placement="top-bottom">
-                      <a href="#data-structure">
-                        <figure class="cc-effect"><img src="images/graph-atd-full.png" alt="Image" />
-                          <figcaption>
-                            <div class="h4">Graph Data Structure</div>
-                            <p>Data Structure</p>
-                          </figcaption>
-                        </figure>
-                      </a>
-                    </div>
-                    <div class="cc-porfolio-image img-raised" data-aos="fade-up" data-aos-anchor-placement="top-bottom">
-                      <a href="#data-structure">
-                        <figure class="cc-effect"><img src="images/listed.jpg" alt="Image" />
-                          <figcaption>
-                            <div class="h4">Sorting and Searching Techniques</div>
-                            <p>Data Structure</p>
-                          </figcaption>
-                        </figure>
-                      </a>
-                    </div>
-                  </div>
-                  <div class="col-md-6">
-                    <div class="cc-porfolio-image img-raised" data-aos="fade-up" data-aos-anchor-placement="top-bottom">
-                      <a href="#data-structure">
-                        <figure class="cc-effect"><img src="images/listed-2.jpg" alt="Image" />
-                          <figcaption>
-                            <div class="h4">Linked Lists - Stack & Queue</div>
-                            <p>Data Structure</p>
-                          </figcaption>
-                        </figure>
-                      </a>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- working experiences section -->
-
-      <div class="section" id="experience">
-        <div class="container cc-experience">
-          <div class="h4 text-center mb-4 title">Work Experience</div>
-          <!-- crawlo -->
-          <div class="card">
-            <div class="row">
-              <div class="col-md-3 bg-primary" data-aos="fade-right" data-aos-offset="50" data-aos-duration="500">
-                <div class="card-body cc-experience-header">
-                  <p>August 2019 - Now</p>
-                  <div class="h5">CRAWLO Ecommerce Pricing & Assortment Analysis</div>
-                </div>
-              </div>
-              <div class="col-md-9" data-aos="fade-left" data-aos-offset="50" data-aos-duration="500">
-                <div class="card-body">
-                  <div class="h5">Software Engineer | PM and Applications Engineers </div>
-                  <p><b>Subject:</b> Improving system quality by identifying issues and common patterns, and developing
-                    standard operating procedures.
-                    <b>Missions: </b> Enhancing applications by identifying opportunities for improvement, making
-                    recommendations and designing and implementing systems and maintaining and improving existing
-                    codebases and peer review code changes.
-                    <b>Tools & Technologies: </b>
-                    - Liaising with colleagues to implement technical designs.
-                    - Investigating and using new technologies where relevant.
-                    - Providing written knowledge transfer material.
-                    - NodeJS, Typescript, NestJS, Elasticsearch, MongoDB, BigData, VueJS, NuxtJS, SSR, Ecom ...
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-          <!-- uam -->
-          <div class="card">
-            <div class="row">
-              <div class="col-md-3 bg-primary" data-aos="fade-right" data-aos-offset="50" data-aos-duration="500">
-                <div class="card-body cc-experience-header">
-                  <p>January - August 2019 (9 mounth) </p>
-                  <div class="h5">Univers Architecture Maroc - UAM</div>
-                </div>
-              </div>
-              <div class="col-md-9" data-aos="fade-left" data-aos-offset="50" data-aos-duration="500">
-                <div class="card-body">
-                  <div class="h5">Q/A Software Engineer </div>
-                  <p><b>Subject:</b> Conception and realization of the integration tests for a large application of the
-                    Lefebvre Sarrut ELS Edition, based on the Cucumber frameworks and the BDD testing method.
-                    <b>Missions: </b>My mission was to create the Unit Tests for the whole
-                    application and to customize them with the part of the modeling of the BDD.
-                    <b>Tools & Technologies: </b>
-                    - Writing Cucumber features with gherkin for all tests.
-                    - Develop a new image-based testing approach for real-time testing.
-                    - Fixed problems on the lot1 based on an API approach.
-                    - Improves the readability of Cucumber reports.
-                    - Real-time execution monitoring with noVNC
-                    - Run the Cucumber scenarios on the Docker container.
-                    - Improved readability of Cucumber reports to identify bugs faster.
-                    - Proposed the new visual approach to make remote testing of Windows and web applications.
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-          <!-- open tag -->
-          <div class="card">
-            <div class="row">
-              <div class="col-md-3 bg-primary" data-aos="fade-right" data-aos-offset="50" data-aos-duration="500">
-                <div class="card-body cc-experience-header">
-                  <p>April - May 2017 (2 mounth)</p>
-                  <div class="h5">OPNETAG .Agadir</div>
-                </div>
-              </div>
-              <div class="col-md-9" data-aos="fade-left" data-aos-offset="50" data-aos-duration="500">
-                <div class="card-body">
-                  <div class="h5">Android Developer</div>
-                  <p><b>Subject:</b> Mobile application for the management of the weighing notes.
-                    <b>Missions:</b> Design and development of an application on Android Studio for the management of
-                    weighing notes for the company JAMAL.
-                    <b>Technology:</b> Java - XML - JSON - SQLite - Volley - Android - MVC ...
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="card">
-            <div class="row">
-              <div class="col-md-3 bg-primary" data-aos="fade-right" data-aos-offset="50" data-aos-duration="500">
-                <div class="card-body cc-experience-header">
-                  <p>April - May 2016 (2 mounth)</p>
-                  <div class="h5">OCP. Safi</div>
-                </div>
-              </div>
-              <div class="col-md-9" data-aos="fade-left" data-aos-offset="50" data-aos-duration="500">
-                <div class="card-body">
-                  <div class="h5">Java Fullstack Developer</div>
-                  <p><b>Subject:</b> Management of phosphate trains.
-                    <b>Missions:</b> creation of a desktop application to manage the phosphate trains entering the
-                    Morocco chemistry factory at OCP Safi every day.
-                    <b>Technology:</b> Java - Java FX - MYSQL - Apache POI - Tray Notification ...
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="card">
-            <div class="row">
-              <div class="col-md-3 bg-primary" data-aos="fade-right" data-aos-offset="50" data-aos-duration="500">
-                <div class="card-body cc-experience-header">
-                  <p>February - March 2016 (2 mounth)</p>
-                  <div class="h5">EST.Meknes</div>
-                </div>
-              </div>
-              <div class="col-md-9" data-aos="fade-left" data-aos-offset="50" data-aos-duration="500">
-                <div class="card-body">
-                  <div class="h5">Front End Developer</div>
-                  <p><b>Subject:</b> Time management application using arithmetic methods (linear).
-                    <b>Missions:</b> [collective work] my mission is to create the models (interfaces) for the whole
-                    application and to customize them with the part of the modeling of the DB.
-                    <b>Technology:</b> Java - Java FX - MYSQL - CEPLEX - Apache iText ...
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <!-- education section -->
-
-      <div class="section">
-        <div class="container cc-education">
-          <div class="h4 text-center mb-4 title">Education</div>
-          <div class="card">
-            <div class="row">
-              <div class="col-md-3 bg-primary" data-aos="fade-right" data-aos-offset="50" data-aos-duration="500">
-                <div class="card-body cc-education-header">
-                  <p>2017 - 2019</p>
-                  <div class="h5">Master's Degree</div>
-                </div>
-              </div>
-              <div class="col-md-9" data-aos="fade-left" data-aos-offset="50" data-aos-duration="500">
-                <div class="card-body">
-                  <div class="h5">Master of Information Technology</div>
-                  <p class="category">University of Computer Science</p>
-                  <p>Distuributed System, Business Intelligence,Object-Oriented Design Concepts in UML2 , Real time
-                    systems, The Artificial Intelligence,Functional programming...</p>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="card">
-            <div class="row">
-              <div class="col-md-3 bg-primary" data-aos="fade-right" data-aos-offset="50" data-aos-duration="500">
-                <div class="card-body cc-education-header">
-                  <p>2016 - 2017</p>
-                  <div class="h5">Bachelor's Degree - LP</div>
-                </div>
-              </div>
-              <div class="col-md-9" data-aos="fade-left" data-aos-offset="50" data-aos-duration="500">
-                <div class="card-body">
-                  <div class="h5">Bachelor of Computer Science</div>
-                  <p class="category">FPE-Moulay Ismail</p>
-                  <p>Professional License of Computer Science ( software engineering ). Courses work includes: Computer
-                    architectures, Network, DataBases Administration, Dynamic Web , Object Oriented Programming,
-                    DataBases....</p>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="card">
-            <div class="row">
-              <div class="col-md-3 bg-primary" data-aos="fade-right" data-aos-offset="50" data-aos-duration="500">
-                <div class="card-body cc-education-header">
-                  <p>2014 - 2016</p>
-                  <div class="h5">DUT's Degree</div>
-                </div>
-              </div>
-              <div class="col-md-9" data-aos="fade-left" data-aos-offset="50" data-aos-duration="500">
-                <div class="card-body">
-                  <div class="h5">Software Engineering</div>
-                  <p class="category">EST Meknes-Moulay Ismail</p>
-                  <p>Modelisation, UML, Merise, JAVA, BDA, SOAP, Web Services, Computer architectures</p>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="card">
-            <div class="row">
-              <div class="col-md-3 bg-primary" data-aos="fade-right" data-aos-offset="50" data-aos-duration="500">
-                <div class="card-body cc-education-header">
-                  <p>2013 - 2014</p>
-                  <div class="h5">High School</div>
-                </div>
-              </div>
-              <div class="col-md-9" data-aos="fade-left" data-aos-offset="50" data-aos-duration="500">
-                <div class="card-body">
-                  <div class="h5">Science of physiques and chimics</div>
-                  <p class="category">High school HASSAN-I</p>
-                  <p></p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- contact section -->
-
-      <div class="section" id="contact">
-        <div class="cc-contact-information" style="background-image: url('images/map.png') ;">
-          <div class="container">
-            <div class="cc-contact">
-              <div class="row">
-                <div class="col-md-9">
-                  <div class="card mb-0" data-aos="zoom-in">
-                    <div class="h4 text-center title">Contact Me</div>
-                    <div class="row">
-                      <div class="col-md-6">
-                        <div class="card-body">
-                          <form action="https://formspree.io/ayoblind@gmail.com" method="POST">
-                            <div class="p pb-3"><strong>Feel free to contact me </strong></div>
-                            <div class="row mb-3">
-                              <div class="col">
-                                <div class="input-group"><span class="input-group-addon"><i
-                                      class="fa fa-user-circle"></i></span>
-                                  <input class="form-control" type="text" name="name" placeholder="Name"
-                                    required="required" />
-                                </div>
-                              </div>
-                            </div>
-                            <div class="row mb-3">
-                              <div class="col">
-                                <div class="input-group"><span class="input-group-addon"><i
-                                      class="fa fa-file-text"></i></span>
-                                  <input class="form-control" type="text" name="Subject" placeholder="Subject"
-                                    required="required" />
-                                </div>
-                              </div>
-                            </div>
-                            <div class="row mb-3">
-                              <div class="col">
-                                <div class="input-group"><span class="input-group-addon"><i
-                                      class="fa fa-envelope"></i></span>
-                                  <input class="form-control" type="email" name="_replyto" placeholder="E-mail"
-                                    required="required" />
-                                </div>
-                              </div>
-                            </div>
-                            <div class="row mb-3">
-                              <div class="col">
-                                <div class="form-group">
-                                  <textarea class="form-control" name="message" placeholder="Your Message"
-                                    required="required"></textarea>
-                                </div>
-                              </div>
-                            </div>
-                            <div class="row">
-                              <div class="col">
-                                <button class="btn btn-primary" type="submit">Send</button>
-                              </div>
-                            </div>
-                          </form>
-                        </div>
-                      </div>
-                      <div class="col-md-6">
-                        <div class="card-body">
-                          <p class="mb-0"><strong>Address </strong></p>
-                          <p class="pb-2"> Meknes, MA</p>
-                          <p class="mb-0"><strong>Phone</strong></p>
-                          <p class="pb-2">+2126 53 86 15 11</p>
-                          <p class="mb-0"><strong>Email</strong></p>
-                          <p>ayoblind@gmail.com</p>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
+  <!-- ambient background -->
+  <div class="backdrop" aria-hidden="true">
+    <div class="backdrop__grid"></div>
+    <div class="backdrop__glow backdrop__glow--a"></div>
+    <div class="backdrop__glow backdrop__glow--b"></div>
   </div>
 
-  <footer class="footer">
-    <div class="container text-center">
-      <a class="cc-facebook btn btn-link" target="_blank" href="https://www.facebook.com/ayoub.elhassani.18">
-        <i class="fa fa-facebook fa-2x " aria-hidden="true"></i>
+  <header class="nav" id="nav">
+    <div class="nav__inner">
+      <a class="brand" href="#top" aria-label="Ayoub EL HASSANI — home">
+        <span class="brand__mark">AEH</span>
+        <span class="brand__text">Ayoub EL HASSANI</span>
       </a>
-      <a class="cc-twitter btn btn-link " target="_blank" href="https://twitter.com/AyoubTec">
-        <i class="fa fa-twitter fa-2x " aria-hidden="true"></i>
-      </a>
-      <a class="cc-google-plus btn btn-link" target="_blank"
-        href="https://www.linkedin.com/in/ayoub-elhassani-a319a2b9/">
-        <i class="fa fa-linkedin fa-2x" aria-hidden="true"></i>
-      </a>
-      <a class="cc-instagram btn btn-link" target="_blank" href="https://www.instagram.com/ayelhassani">
-        <i class="fa fa-instagram fa-2x " aria-hidden="true"></i>
-      </a>
-    </div>
 
-    <div class="h4 title text-center"> Ayoub El Hassani</div>
-    <div class="text-center text-muted">
-      <p>Copyright &copy; Ayoub El Hassani
-        <script>document.write(new Date().getFullYear())</script>. All Rights Reserved
+      <nav class="nav__links" id="navLinks" aria-label="Section navigation">
+        <a href="#about">About</a>
+        <a href="#work">What I do</a>
+        <a href="#stack">Stack</a>
+        <a href="#experience">Experience</a>
+        <a href="#education">Education</a>
+        <a href="#contact">Contact</a>
+      </nav>
+
+      <div class="nav__actions">
+        <button class="icon-btn" id="themeToggle" type="button" aria-label="Switch colour theme">
+          <svg class="icon-sun" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4.2"/><path d="M12 2.2v2.4M12 19.4v2.4M4.6 4.6l1.7 1.7M17.7 17.7l1.7 1.7M2.2 12h2.4M19.4 12h2.4M4.6 19.4l1.7-1.7M17.7 6.3l1.7-1.7"/></svg>
+          <svg class="icon-moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 14.2A8.2 8.2 0 0 1 9.8 4a8.2 8.2 0 1 0 10.2 10.2Z"/></svg>
+        </button>
+        <a class="btn btn--sm btn--primary nav__cta" href="#contact">Get in touch</a>
+        <button class="icon-btn nav__burger" id="burger" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="navLinks">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main id="main">
+
+    <!-- ===== HERO ===== -->
+    <section class="hero" id="top">
+      <div class="wrap hero__grid">
+
+        <div class="hero__copy">
+          <p class="eyebrow reveal">
+            <span class="pulse" aria-hidden="true"></span>
+            Senior Software Engineer · Shipping since 2019
+          </p>
+
+          <h1 class="hero__name reveal">Ayoub<br>EL&nbsp;HASSANI</h1>
+
+          <p class="hero__role reveal">
+            I build <em>data-intensive backends</em> — distributed systems that ingest,
+            normalise and search commerce data at scale.
+          </p>
+
+          <ul class="hero__spec reveal" aria-label="Specialisations">
+            <li>Backend &amp; Distributed Systems</li>
+            <li>Node.js</li>
+            <li>TypeScript</li>
+            <li>NestJS</li>
+            <li>Elasticsearch</li>
+            <li>Data Engineering &amp; AI</li>
+          </ul>
+
+          <div class="hero__cta reveal">
+            <a class="btn btn--primary" href="#contact">
+              Get in touch
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h13M12.5 5.5 19 12l-6.5 6.5"/></svg>
+            </a>
+            <a class="btn btn--ghost" href="https://github.com/ayoublind" target="_blank" rel="noopener">
+              <svg viewBox="0 0 24 24" aria-hidden="true" class="icon-fill"><path d="M12 1.8a10.2 10.2 0 0 0-3.23 19.88c.51.1.7-.22.7-.49v-1.9c-2.84.62-3.44-1.2-3.44-1.2-.47-1.19-1.14-1.5-1.14-1.5-.93-.63.07-.62.07-.62 1.03.07 1.57 1.06 1.57 1.06.91 1.57 2.4 1.12 2.99.86.09-.66.36-1.12.65-1.38-2.27-.26-4.66-1.14-4.66-5.06 0-1.12.4-2.03 1.05-2.75-.1-.26-.45-1.3.1-2.71 0 0 .86-.28 2.81 1.05a9.7 9.7 0 0 1 5.12 0c1.95-1.33 2.81-1.05 2.81-1.05.55 1.41.2 2.45.1 2.71.65.72 1.05 1.63 1.05 2.75 0 3.93-2.39 4.8-4.67 5.05.37.32.7.94.7 1.9v2.81c0 .27.18.6.7.49A10.2 10.2 0 0 0 12 1.8Z"/></svg>
+              GitHub
+            </a>
+          </div>
+
+          <dl class="hero__meta reveal">
+            <div><dt>Experience</dt><dd><span id="yearsExp">7</span>+ years</dd></div>
+            <div><dt>Based in</dt><dd>Meknes, Morocco</dd></div>
+            <div><dt>Languages</dt><dd>EN · FR · AR</dd></div>
+          </dl>
+        </div>
+
+        <!-- Architecture card: the visual identity, in place of a portrait -->
+        <aside class="hero__panel reveal" aria-label="How I think about systems">
+          <div class="panel">
+            <div class="panel__bar">
+              <span class="dot"></span><span class="dot"></span><span class="dot"></span>
+              <span class="panel__title">pipeline.ts</span>
+            </div>
+
+            <div class="panel__body">
+              <ol class="flow">
+                <li class="flow__node">
+                  <span class="flow__idx">01</span>
+                  <div>
+                    <strong>Acquire</strong>
+                    <span>Distributed crawlers · queues · rate control</span>
+                  </div>
+                </li>
+                <li class="flow__node">
+                  <span class="flow__idx">02</span>
+                  <div>
+                    <strong>Normalise</strong>
+                    <span>Matching · dedup · enrichment · AI assist</span>
+                  </div>
+                </li>
+                <li class="flow__node">
+                  <span class="flow__idx">03</span>
+                  <div>
+                    <strong>Index</strong>
+                    <span>Elasticsearch · MongoDB · aggregations</span>
+                  </div>
+                </li>
+                <li class="flow__node">
+                  <span class="flow__idx">04</span>
+                  <div>
+                    <strong>Serve</strong>
+                    <span>NestJS APIs · SSR dashboards · alerting</span>
+                  </div>
+                </li>
+              </ol>
+            </div>
+
+            <div class="panel__foot">
+              <span class="mono">// pricing &amp; assortment intelligence</span>
+            </div>
+          </div>
+        </aside>
+      </div>
+
+      <a class="scroll-hint" href="#about" aria-label="Scroll to about"><span></span></a>
+    </section>
+
+    <!-- ===== ABOUT ===== -->
+    <section class="section" id="about">
+      <div class="wrap">
+        <header class="section__head reveal">
+          <p class="section__kicker"><span class="mono">01</span> About</p>
+          <h2 class="section__title">Engineering for scale, not for demos</h2>
+        </header>
+
+        <div class="about">
+          <div class="about__prose reveal">
+            <p class="lead">
+              I am a Senior Software Engineer working on backend and distributed systems.
+              Since 2019 I have been building the platform behind e-commerce pricing and
+              assortment analysis — the kind of system where correctness, throughput and
+              search relevance all have to hold at once.
+            </p>
+            <p>
+              Most of my work sits between <strong>data engineering</strong> and
+              <strong>platform architecture</strong>: designing ingestion pipelines that stay
+              reliable under load, modelling data so it can actually be queried, and shaping
+              Elasticsearch indices that answer real product questions in milliseconds.
+              Increasingly that also means applying <strong>AI</strong> where it earns its
+              place — entity matching, classification and enrichment across messy catalogue data.
+            </p>
+            <p>
+              I care about the parts that outlive a sprint: clear service boundaries, code the
+              next engineer can read, review culture, and written standards instead of tribal
+              knowledge. I hold a Master's degree in Software Engineering &amp; Information
+              Systems, and worked across QA automation, Android and full-stack delivery before
+              specialising in backend.
+            </p>
+          </div>
+
+          <div class="about__facts reveal">
+            <div class="facts">
+              <div class="facts__row"><span class="facts__k">Role</span><span class="facts__v">Senior Software Engineer</span></div>
+              <div class="facts__row"><span class="facts__k">Focus</span><span class="facts__v">Backend · Distributed Systems</span></div>
+              <div class="facts__row"><span class="facts__k">Core stack</span><span class="facts__v">Node.js · TypeScript · NestJS</span></div>
+              <div class="facts__row"><span class="facts__k">Data</span><span class="facts__v">Elasticsearch · MongoDB</span></div>
+              <div class="facts__row"><span class="facts__k">Domain</span><span class="facts__v">E-commerce intelligence</span></div>
+              <div class="facts__row"><span class="facts__k">Education</span><span class="facts__v">MSc, Software Engineering</span></div>
+              <div class="facts__row"><span class="facts__k">Location</span><span class="facts__v">Meknes, Morocco</span></div>
+              <div class="facts__row"><span class="facts__k">Email</span><span class="facts__v"><a href="mailto:ayelhassani@gmail.com">ayelhassani@gmail.com</a></span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== WHAT I DO ===== -->
+    <section class="section" id="work">
+      <div class="wrap">
+        <header class="section__head reveal">
+          <p class="section__kicker"><span class="mono">02</span> What I do</p>
+          <h2 class="section__title">Where I add the most value</h2>
+          <p class="section__sub">Six problems I have solved repeatedly in production.</p>
+        </header>
+
+        <div class="cards">
+          <article class="card reveal">
+            <div class="card__icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7.5h16M4 12h16M4 16.5h16"/><circle cx="7.5" cy="7.5" r="1.6"/><circle cx="14" cy="12" r="1.6"/><circle cx="10" cy="16.5" r="1.6"/></svg></div>
+            <h3>Data acquisition at scale</h3>
+            <p>Distributed crawling and ingestion: work queues, back-pressure, retry semantics and rate control, so a pipeline touching millions of records degrades gracefully instead of falling over.</p>
+          </article>
+
+          <article class="card reveal">
+            <div class="card__icon"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6"/><path d="m15.2 15.2 4.3 4.3"/></svg></div>
+            <h3>Search &amp; relevance</h3>
+            <p>Elasticsearch mappings, analysers, aggregations and query tuning — designing indices around the questions the product actually asks, then keeping them fast as the corpus grows.</p>
+          </article>
+
+          <article class="card reveal">
+            <div class="card__icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 19V9.5M9.3 19V5M14.7 19v-6.5M20 19v-9"/></svg></div>
+            <h3>Pricing &amp; assortment analytics</h3>
+            <p>Turning raw competitor and catalogue data into decisions: price positioning, assortment gaps, movement detection and the alerting that makes any of it actionable.</p>
+          </article>
+
+          <article class="card reveal">
+            <div class="card__icon"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3.2" y="4" width="17.6" height="6" rx="2"/><rect x="3.2" y="14" width="17.6" height="6" rx="2"/><path d="M7 7h.01M7 17h.01"/></svg></div>
+            <h3>API &amp; platform architecture</h3>
+            <p>NestJS services with clear boundaries and contracts, sensible caching layers, background workers, and the observability needed to debug a distributed system at 2am.</p>
+          </article>
+
+          <article class="card reveal">
+            <div class="card__icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3.5 20 8v8l-8 4.5L4 16V8z"/><path d="m4 8 8 4.5L20 8M12 12.5V20.5"/></svg></div>
+            <h3>Data enrichment with AI</h3>
+            <p>Applying NLP and ML where deterministic rules run out: product matching across inconsistent listings, classification, attribute extraction and de-duplication over messy real-world catalogues.</p>
+          </article>
+
+          <article class="card reveal">
+            <div class="card__icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 11.5 11 13.5l4.5-4.5"/><path d="M5 6.2 12 3.5l7 2.7v6.1c0 4-2.9 7.1-7 8.2-4.1-1.1-7-4.2-7-8.2z"/></svg></div>
+            <h3>Quality &amp; engineering standards</h3>
+            <p>BDD and integration test automation, containerised test environments, code review practice and written standard operating procedures — so quality survives team growth.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== STACK ===== -->
+    <section class="section" id="stack">
+      <div class="wrap">
+        <header class="section__head reveal">
+          <p class="section__kicker"><span class="mono">03</span> Stack</p>
+          <h2 class="section__title">Tools I reach for</h2>
+          <p class="section__sub">Grouped by what they are for, ordered by how much I use them.</p>
+        </header>
+
+        <div class="stack">
+          <section class="stack__group reveal">
+            <h3><span class="mono">/</span> Backend &amp; distributed systems</h3>
+            <ul class="chips">
+              <li class="chip chip--key">Node.js</li>
+              <li class="chip chip--key">TypeScript</li>
+              <li class="chip chip--key">NestJS</li>
+              <li class="chip">REST APIs</li>
+              <li class="chip">Microservices</li>
+              <li class="chip">Event-driven design</li>
+              <li class="chip">Queues &amp; workers</li>
+              <li class="chip">Caching</li>
+              <li class="chip">Java / Spring</li>
+            </ul>
+          </section>
+
+          <section class="stack__group reveal">
+            <h3><span class="mono">/</span> Data &amp; search</h3>
+            <ul class="chips">
+              <li class="chip chip--key">Elasticsearch</li>
+              <li class="chip chip--key">MongoDB</li>
+              <li class="chip">ELK stack</li>
+              <li class="chip">Redis</li>
+              <li class="chip">SQL / MySQL</li>
+              <li class="chip">ETL pipelines</li>
+              <li class="chip">Data modelling</li>
+              <li class="chip">Large-scale crawling</li>
+            </ul>
+          </section>
+
+          <section class="stack__group reveal">
+            <h3><span class="mono">/</span> Data engineering &amp; AI</h3>
+            <ul class="chips">
+              <li class="chip chip--key">Python</li>
+              <li class="chip">NLP</li>
+              <li class="chip">Entity matching</li>
+              <li class="chip">Classification</li>
+              <li class="chip">TensorFlow</li>
+              <li class="chip">Google Cloud NL API</li>
+              <li class="chip">LLM integration</li>
+            </ul>
+          </section>
+
+          <section class="stack__group reveal">
+            <h3><span class="mono">/</span> Frontend</h3>
+            <ul class="chips">
+              <li class="chip chip--key">Vue.js</li>
+              <li class="chip chip--key">Nuxt / SSR</li>
+              <li class="chip">JavaScript</li>
+              <li class="chip">HTML &amp; CSS</li>
+              <li class="chip">React</li>
+            </ul>
+          </section>
+
+          <section class="stack__group reveal">
+            <h3><span class="mono">/</span> Platform &amp; tooling</h3>
+            <ul class="chips">
+              <li class="chip chip--key">Docker</li>
+              <li class="chip">Linux</li>
+              <li class="chip">Git</li>
+              <li class="chip">CI/CD</li>
+              <li class="chip">GCP</li>
+              <li class="chip">Firebase</li>
+              <li class="chip">Observability</li>
+            </ul>
+          </section>
+
+          <section class="stack__group reveal">
+            <h3><span class="mono">/</span> Practice</h3>
+            <ul class="chips">
+              <li class="chip chip--key">System design</li>
+              <li class="chip">Code review</li>
+              <li class="chip">Mentoring</li>
+              <li class="chip">BDD / Cucumber</li>
+              <li class="chip">Test automation</li>
+              <li class="chip">UML</li>
+              <li class="chip">Technical writing</li>
+            </ul>
+          </section>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== EXPERIENCE ===== -->
+    <section class="section" id="experience">
+      <div class="wrap">
+        <header class="section__head reveal">
+          <p class="section__kicker"><span class="mono">04</span> Experience</p>
+          <h2 class="section__title">Professional track record</h2>
+          <p class="section__sub">Full-time in tech since 2019.</p>
+        </header>
+
+        <ol class="timeline">
+          <li class="timeline__item reveal">
+            <div class="timeline__marker" aria-hidden="true"><span></span></div>
+            <div class="timeline__card">
+              <div class="timeline__meta">
+                <span class="tag tag--live"><span class="pulse" aria-hidden="true"></span>Current</span>
+                <span class="mono timeline__date">Aug 2019 — Present</span>
+              </div>
+              <h3 class="timeline__role">Senior Software Engineer</h3>
+              <p class="timeline__org">CRAWLO — E-commerce Pricing &amp; Assortment Analysis</p>
+              <p class="timeline__lead">
+                Own backend and data-platform work for a product that tracks pricing and
+                assortment across large e-commerce catalogues.
+              </p>
+              <ul class="bullets">
+                <li>Design and build distributed ingestion and processing pipelines handling large-scale product and pricing data.</li>
+                <li>Architect NestJS services and Elasticsearch indices behind the analytics and search experience, tuning mappings and queries for latency at scale.</li>
+                <li>Improve system quality by identifying recurring failure patterns and turning the fixes into standard operating procedures.</li>
+                <li>Drive technical decisions end to end — proposals, design, implementation, then maintenance of the codebases that result.</li>
+                <li>Review peer code, mentor on backend practice, and produce written knowledge transfer material for the team.</li>
+                <li>Evaluate and introduce new technologies where they solve a real constraint.</li>
+              </ul>
+              <ul class="chips chips--sm">
+                <li class="chip">Node.js</li><li class="chip">TypeScript</li><li class="chip">NestJS</li>
+                <li class="chip">Elasticsearch</li><li class="chip">MongoDB</li><li class="chip">Big data</li>
+                <li class="chip">Vue.js</li><li class="chip">Nuxt / SSR</li>
+              </ul>
+            </div>
+          </li>
+
+          <li class="timeline__item reveal">
+            <div class="timeline__marker" aria-hidden="true"><span></span></div>
+            <div class="timeline__card">
+              <div class="timeline__meta">
+                <span class="mono timeline__date">Jan — Aug 2019</span>
+              </div>
+              <h3 class="timeline__role">QA Software Engineer</h3>
+              <p class="timeline__org">Univers Architecture Maroc (UAM)</p>
+              <p class="timeline__lead">
+                Designed and built the integration test suite for a large Lefebvre Sarrut (ELS
+                Edition) application, using Cucumber and a BDD methodology.
+              </p>
+              <ul class="bullets">
+                <li>Authored Gherkin feature specifications covering the full application surface.</li>
+                <li>Developed an image-based testing approach enabling real-time visual verification.</li>
+                <li>Ran Cucumber scenarios in Docker containers with noVNC for live execution monitoring.</li>
+                <li>Restructured Cucumber reporting so failures could be diagnosed far faster.</li>
+                <li>Proposed the visual approach that made remote testing of Windows and web apps possible.</li>
+              </ul>
+              <ul class="chips chips--sm">
+                <li class="chip">Cucumber</li><li class="chip">BDD / Gherkin</li><li class="chip">Docker</li>
+                <li class="chip">noVNC</li><li class="chip">API testing</li>
+              </ul>
+            </div>
+          </li>
+
+          <li class="timeline__item reveal">
+            <div class="timeline__marker timeline__marker--muted" aria-hidden="true"><span></span></div>
+            <div class="timeline__card timeline__card--compact">
+              <div class="timeline__meta">
+                <span class="mono timeline__date">2016 — 2017</span>
+              </div>
+              <h3 class="timeline__role">Earlier engineering roles</h3>
+              <p class="timeline__lead">
+                Internships and project work that built the fundamentals, before specialising in backend.
+              </p>
+              <ul class="mini">
+                <li>
+                  <strong>Android Developer</strong> · OPNETAG, Agadir <span class="mono">2017</span>
+                  <span>Android application for managing weighing notes — Java, SQLite, Volley, MVC.</span>
+                </li>
+                <li>
+                  <strong>Java Full-Stack Developer</strong> · OCP, Safi <span class="mono">2016</span>
+                  <span>Desktop system tracking daily phosphate train movements — Java, JavaFX, MySQL, Apache POI.</span>
+                </li>
+                <li>
+                  <strong>Front-End Developer</strong> · EST Meknes <span class="mono">2016</span>
+                  <span>Timetabling application using linear optimisation — JavaFX, MySQL, CPLEX, iText.</span>
+                </li>
+              </ul>
+            </div>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- ===== EDUCATION ===== -->
+    <section class="section" id="education">
+      <div class="wrap">
+        <header class="section__head reveal">
+          <p class="section__kicker"><span class="mono">05</span> Education</p>
+          <h2 class="section__title">Academic background</h2>
+        </header>
+
+        <div class="edu">
+          <article class="edu__item reveal">
+            <span class="mono edu__date">2017 — 2019</span>
+            <div>
+              <h3>Master's Degree — Software Engineering &amp; Information Systems</h3>
+              <p class="edu__org">Faculte des Sciences d'Agadir — Ibn Zohr University</p>
+              <p>Distributed systems, business intelligence, real-time systems, artificial
+                 intelligence, object-oriented design in UML2, functional programming.</p>
+            </div>
+          </article>
+
+          <article class="edu__item reveal">
+            <span class="mono edu__date">2016 — 2017</span>
+            <div>
+              <h3>Licence Professionnelle — Computer Science</h3>
+              <p class="edu__org">FPE — Moulay Ismail University</p>
+              <p>Software engineering track: computer architecture, networking, database
+                 administration, dynamic web, object-oriented programming.</p>
+            </div>
+          </article>
+
+          <article class="edu__item reveal">
+            <span class="mono edu__date">2014 — 2016</span>
+            <div>
+              <h3>DUT — Software Engineering</h3>
+              <p class="edu__org">EST Meknes — Moulay Ismail University</p>
+              <p>Modelling and design (UML, Merise), Java, advanced databases, SOAP web
+                 services, computer architecture.</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== CONTACT ===== -->
+    <section class="section section--contact" id="contact">
+      <div class="wrap">
+        <header class="section__head reveal">
+          <p class="section__kicker"><span class="mono">06</span> Contact</p>
+          <h2 class="section__title">Let us build something that scales</h2>
+          <p class="section__sub">
+            Open to senior backend, distributed systems and data engineering work.
+            The fastest way to reach me is email.
+          </p>
+        </header>
+
+        <div class="contact">
+          <div class="contact__side reveal">
+            <a class="contact__mail" href="mailto:ayelhassani@gmail.com">
+              <span class="mono contact__mail-k">Email</span>
+              <span class="contact__mail-v">ayelhassani@gmail.com</span>
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h13M12.5 5.5 19 12l-6.5 6.5"/></svg>
+            </a>
+
+            <div class="contact__links">
+              <a class="social" href="https://github.com/ayoublind" target="_blank" rel="noopener">
+                <svg viewBox="0 0 24 24" aria-hidden="true" class="icon-fill"><path d="M12 1.8a10.2 10.2 0 0 0-3.23 19.88c.51.1.7-.22.7-.49v-1.9c-2.84.62-3.44-1.2-3.44-1.2-.47-1.19-1.14-1.5-1.14-1.5-.93-.63.07-.62.07-.62 1.03.07 1.57 1.06 1.57 1.06.91 1.57 2.4 1.12 2.99.86.09-.66.36-1.12.65-1.38-2.27-.26-4.66-1.14-4.66-5.06 0-1.12.4-2.03 1.05-2.75-.1-.26-.45-1.3.1-2.71 0 0 .86-.28 2.81 1.05a9.7 9.7 0 0 1 5.12 0c1.95-1.33 2.81-1.05 2.81-1.05.55 1.41.2 2.45.1 2.71.65.72 1.05 1.63 1.05 2.75 0 3.93-2.39 4.8-4.67 5.05.37.32.7.94.7 1.9v2.81c0 .27.18.6.7.49A10.2 10.2 0 0 0 12 1.8Z"/></svg>
+                <span><strong>GitHub</strong><em>@ayoublind</em></span>
+              </a>
+              <a class="social" href="https://www.linkedin.com/in/ayoub-el-hassani-a319a2b9/" target="_blank" rel="noopener">
+                <svg viewBox="0 0 24 24" aria-hidden="true" class="icon-fill"><path d="M4.98 3.5a2.5 2.5 0 1 0 0 5 2.5 2.5 0 0 0 0-5ZM3 9.5h4v11H3v-11Zm6.5 0h3.8v1.5h.05c.53-.95 1.83-1.95 3.76-1.95 4.02 0 4.76 2.5 4.76 5.76v5.69h-4v-5.05c0-1.2-.02-2.75-1.7-2.75-1.7 0-1.96 1.3-1.96 2.66v5.14h-3.7v-11Z"/></svg>
+                <span><strong>LinkedIn</strong><em>Ayoub EL HASSANI</em></span>
+              </a>
+              <a class="social" href="https://x.com/ayoub_el14430" target="_blank" rel="noopener">
+                <svg viewBox="0 0 24 24" aria-hidden="true" class="icon-fill"><path d="M17.2 3h3.3l-7.2 8.24L21.8 21h-6.6l-4.3-5.6L5.9 21H2.6l7.7-8.8L2.3 3h6.8l3.9 5.15L17.2 3Zm-1.16 16.03h1.83L7.8 4.87H5.84l10.2 14.16Z"/></svg>
+                <span><strong>X</strong><em>@ayoub_el14430</em></span>
+              </a>
+            </div>
+
+            <p class="contact__loc mono">Meknes, Morocco · GMT+1 · Remote-friendly</p>
+          </div>
+
+          <!--
+            To enable this form: create a form at https://formspree.io, then replace
+            YOUR_FORM_ID below with the id it gives you (looks like "xbjqwkvd").
+            Until then the form falls back to opening a pre-filled email — see scripts/main.js.
+          -->
+          <form class="contact__form reveal" id="contactForm"
+                action="https://formspree.io/f/YOUR_FORM_ID" method="POST"
+                data-fallback-email="ayelhassani@gmail.com">
+            <div class="field">
+              <label for="cname">Name</label>
+              <input id="cname" name="name" type="text" placeholder="Your name" required>
+            </div>
+            <div class="field">
+              <label for="cmail">Email</label>
+              <input id="cmail" name="_replyto" type="email" placeholder="you@company.com" required>
+            </div>
+            <div class="field">
+              <label for="csubj">Subject</label>
+              <input id="csubj" name="subject" type="text" placeholder="What is this about?" required>
+            </div>
+            <div class="field">
+              <label for="cmsg">Message</label>
+              <textarea id="cmsg" name="message" rows="5" placeholder="A few lines about the role or project..." required></textarea>
+            </div>
+            <button class="btn btn--primary btn--block" type="submit">
+              Send message
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h13M12.5 5.5 19 12l-6.5 6.5"/></svg>
+            </button>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="wrap footer__inner">
+      <div class="footer__brand">
+        <span class="brand__mark">AEH</span>
+        <div>
+          <strong>Ayoub EL HASSANI</strong>
+          <span>Senior Software Engineer · Backend &amp; Distributed Systems</span>
+        </div>
+      </div>
+
+      <nav class="footer__social" aria-label="Social links">
+        <a href="https://github.com/ayoublind" target="_blank" rel="noopener" aria-label="GitHub">
+          <svg viewBox="0 0 24 24" aria-hidden="true" class="icon-fill"><path d="M12 1.8a10.2 10.2 0 0 0-3.23 19.88c.51.1.7-.22.7-.49v-1.9c-2.84.62-3.44-1.2-3.44-1.2-.47-1.19-1.14-1.5-1.14-1.5-.93-.63.07-.62.07-.62 1.03.07 1.57 1.06 1.57 1.06.91 1.57 2.4 1.12 2.99.86.09-.66.36-1.12.65-1.38-2.27-.26-4.66-1.14-4.66-5.06 0-1.12.4-2.03 1.05-2.75-.1-.26-.45-1.3.1-2.71 0 0 .86-.28 2.81 1.05a9.7 9.7 0 0 1 5.12 0c1.95-1.33 2.81-1.05 2.81-1.05.55 1.41.2 2.45.1 2.71.65.72 1.05 1.63 1.05 2.75 0 3.93-2.39 4.8-4.67 5.05.37.32.7.94.7 1.9v2.81c0 .27.18.6.7.49A10.2 10.2 0 0 0 12 1.8Z"/></svg>
+        </a>
+        <a href="https://www.linkedin.com/in/ayoub-el-hassani-a319a2b9/" target="_blank" rel="noopener" aria-label="LinkedIn">
+          <svg viewBox="0 0 24 24" aria-hidden="true" class="icon-fill"><path d="M4.98 3.5a2.5 2.5 0 1 0 0 5 2.5 2.5 0 0 0 0-5ZM3 9.5h4v11H3v-11Zm6.5 0h3.8v1.5h.05c.53-.95 1.83-1.95 3.76-1.95 4.02 0 4.76 2.5 4.76 5.76v5.69h-4v-5.05c0-1.2-.02-2.75-1.7-2.75-1.7 0-1.96 1.3-1.96 2.66v5.14h-3.7v-11Z"/></svg>
+        </a>
+        <a href="https://x.com/ayoub_el14430" target="_blank" rel="noopener" aria-label="X">
+          <svg viewBox="0 0 24 24" aria-hidden="true" class="icon-fill"><path d="M17.2 3h3.3l-7.2 8.24L21.8 21h-6.6l-4.3-5.6L5.9 21H2.6l7.7-8.8L2.3 3h6.8l3.9 5.15L17.2 3Zm-1.16 16.03h1.83L7.8 4.87H5.84l10.2 14.16Z"/></svg>
+        </a>
+        <a href="mailto:ayelhassani@gmail.com" aria-label="Email">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="2.8" y="4.8" width="18.4" height="14.4" rx="2.4"/><path d="m3.6 7 8.4 6 8.4-6"/></svg>
+        </a>
+      </nav>
+
+      <p class="footer__copy mono">
+        &copy; <span id="year">2026</span> Ayoub EL HASSANI · Built from scratch
       </p>
     </div>
   </footer>
 
-  <script src="js/core/jquery.3.2.1.min.js"></script>
-  <script src="js/core/popper.min.js"></script>
-  <script src="js/core/bootstrap.min.js"></script>
-  <script src="js/now-ui-kit.js?v=1.1.0"></script>
-  <script src="js/aos.js"></script>
   <script src="scripts/main.js"></script>
 </body>
 
