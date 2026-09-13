@@ -1,0 +1,382 @@
+/* ==========================================================================
+   Blog — listing, post shell and prose.
+   Extends styles/main.css and reuses its tokens; load it after main.css.
+   ========================================================================== */
+
+/* ---------- shared shell ---------- */
+
+.post-list-section,
+.post { padding-block: clamp(118px, 15vh, 165px) clamp(72px, 10vh, 110px); }
+
+.wrap--prose { max-width: 760px; }
+
+/* ---------- listing ---------- */
+
+.post-list__feed { margin: 20px 0 0; }
+.post-list__feed a {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 7px 14px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-pill);
+  background: var(--surface);
+  color: var(--muted);
+  transition: color .2s var(--ease), border-color .2s var(--ease);
+}
+.post-list__feed a:hover { color: var(--a1); border-color: var(--a1); }
+.post-list__feed svg { font-size: 14px; }
+
+.post-list { display: grid; gap: 16px; }
+
+.post-card {
+  position: relative;
+  display: block;
+  padding: 28px 28px 26px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  background: var(--surface);
+  overflow: hidden;
+  transition: transform .3s var(--ease), border-color .3s var(--ease), box-shadow .3s var(--ease);
+}
+.post-card::before {
+  content: '';
+  position: absolute;
+  inset: 0 auto 0 0;
+  width: 2px;
+  background: linear-gradient(180deg, var(--a1), var(--a2));
+  opacity: 0;
+  transition: opacity .3s var(--ease);
+}
+.post-card:hover {
+  transform: translateY(-3px);
+  border-color: var(--border-2);
+  box-shadow: var(--shadow);
+}
+.post-card:hover::before { opacity: 1; }
+
+.post-card__meta {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 11px;
+  color: var(--faint);
+}
+.post-card__read { color: var(--a1); }
+
+.tag--draft {
+  border-color: color-mix(in srgb, var(--a2) 40%, transparent);
+  background: color-mix(in srgb, var(--a2) 12%, transparent);
+  color: var(--a2);
+}
+
+.post-card__title {
+  margin-bottom: 9px;
+  font-size: clamp(1.2rem, 2.6vw, 1.5rem);
+  font-weight: 700;
+  letter-spacing: -0.028em;
+  transition: color .25s var(--ease);
+}
+.post-card:hover .post-card__title { color: var(--a1); }
+
+.post-card__excerpt {
+  margin: 0 0 14px;
+  max-width: 68ch;
+  font-size: 15px;
+  line-height: 1.62;
+  color: var(--muted);
+}
+
+.post-card__tags { margin-bottom: 16px; }
+
+.post-card__more {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  font-size: 13.5px;
+  font-weight: 600;
+  color: var(--a1);
+}
+.post-card__more svg { font-size: 15px; transition: transform .25s var(--ease); }
+.post-card:hover .post-card__more svg { transform: translateX(4px); }
+
+.post-list__empty {
+  padding: 48px 28px;
+  border: 1px dashed var(--border-2);
+  border-radius: var(--radius);
+  text-align: center;
+  color: var(--muted);
+}
+.post-list__empty .mono { color: var(--faint); }
+.post-list__empty p:last-child { margin: 0; }
+
+/* ---------- post header ---------- */
+
+.post__back {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 26px;
+  color: var(--muted);
+  transition: color .2s var(--ease);
+}
+.post__back:hover { color: var(--a1); }
+.post__back svg { font-size: 15px; transition: transform .25s var(--ease); }
+.post__back:hover svg { transform: translateX(-3px); }
+
+.post__draft-note {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 22px;
+  padding: 13px 16px;
+  border: 1px solid color-mix(in srgb, var(--a2) 30%, transparent);
+  border-radius: var(--radius-sm);
+  background: color-mix(in srgb, var(--a2) 8%, transparent);
+  font-size: 13.5px;
+  color: var(--muted);
+}
+.post__draft-note code {
+  padding: 2px 6px;
+  border-radius: 5px;
+  background: var(--surface-2);
+  font-family: var(--mono);
+  font-size: .88em;
+}
+
+.post__title {
+  margin-bottom: 18px;
+  font-size: clamp(1.9rem, 5vw, 2.9rem);
+  letter-spacing: -0.038em;
+}
+
+.post__standfirst {
+  margin: 0 0 20px;
+  font-size: clamp(1.05rem, 2.2vw, 1.2rem);
+  line-height: 1.55;
+  color: var(--muted);
+}
+
+.post__meta {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 9px;
+  padding-bottom: 22px;
+  border-bottom: 1px solid var(--border);
+  color: var(--faint);
+}
+
+.post__tags { margin-top: 18px; }
+
+/* ---------- prose ---------- */
+
+.prose {
+  margin-top: 38px;
+  font-size: 16.5px;
+  line-height: 1.75;
+  color: var(--muted);
+}
+
+.prose > * + * { margin-top: 1.15em; }
+
+.prose h2,
+.prose h3,
+.prose h4 {
+  margin-top: 2em;
+  margin-bottom: .6em;
+  color: var(--text);
+  scroll-margin-top: 96px;
+}
+.prose h2 { font-size: 1.45rem; letter-spacing: -0.028em; }
+.prose h3 { font-size: 1.16rem; letter-spacing: -0.022em; }
+.prose h4 { font-size: 1rem; font-weight: 600; }
+
+.prose strong { color: var(--text); font-weight: 600; }
+
+.prose a {
+  color: var(--a1);
+  border-bottom: 1px solid color-mix(in srgb, var(--a1) 35%, transparent);
+  transition: border-color .2s var(--ease);
+}
+.prose a:hover { border-bottom-color: var(--a1); }
+
+.prose ul,
+.prose ol { padding-left: 2px; }
+.prose li { position: relative; padding-left: 22px; }
+.prose li + li { margin-top: .5em; }
+
+.prose ul > li::before {
+  content: '';
+  position: absolute;
+  left: 3px; top: .68em;
+  width: 6px; height: 6px;
+  border-radius: 2px;
+  background: linear-gradient(135deg, var(--a1), var(--a2));
+}
+.prose ol { counter-reset: prose-ol; }
+.prose ol > li { counter-increment: prose-ol; }
+.prose ol > li::before {
+  content: counter(prose-ol) ".";
+  position: absolute;
+  left: 0; top: 0;
+  font-family: var(--mono);
+  font-size: .82em;
+  color: var(--a1);
+}
+
+/* inline code */
+.prose code {
+  padding: 2px 6px;
+  border: 1px solid var(--border);
+  border-radius: 5px;
+  background: var(--surface-2);
+  font-family: var(--mono);
+  font-size: .86em;
+  color: var(--text);
+  word-break: break-word;
+}
+
+/* fenced blocks — Rouge wraps output in .highlight > pre > code */
+.prose pre,
+.prose .highlight {
+  margin-block: 1.6em;
+  padding: 18px 20px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  background: var(--bg-2);
+  overflow-x: auto;
+}
+.prose .highlight pre { margin: 0; padding: 0; border: 0; background: none; }
+.prose pre code {
+  padding: 0;
+  border: 0;
+  background: none;
+  font-size: 13.5px;
+  line-height: 1.7;
+  color: var(--text);
+  white-space: pre;
+  word-break: normal;
+}
+
+.prose blockquote {
+  margin-block: 1.6em;
+  margin-inline: 0;
+  padding: 4px 0 4px 22px;
+  border-left: 2px solid var(--a1);
+  color: var(--text);
+  font-size: 1.03em;
+}
+.prose blockquote p:last-child { margin-bottom: 0; }
+
+.prose hr {
+  margin-block: 2.4em;
+  border: 0;
+  border-top: 1px solid var(--border);
+}
+
+.prose img {
+  display: block;
+  margin-block: 1.8em;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+}
+
+.prose table {
+  width: 100%;
+  margin-block: 1.6em;
+  border-collapse: collapse;
+  font-size: 14.5px;
+}
+.prose th,
+.prose td {
+  padding: 10px 14px;
+  border-bottom: 1px solid var(--border);
+  text-align: left;
+}
+.prose th {
+  font-family: var(--mono);
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: .08em;
+  color: var(--faint);
+}
+.prose td { color: var(--muted); }
+
+/* Tables and code can exceed the measure; give them their own scroller. */
+.prose .table-scroll { overflow-x: auto; }
+
+/* ---------- syntax highlighting (Rouge) ---------- */
+
+.prose .highlight .c,
+.prose .highlight .c1,
+.prose .highlight .cm { color: var(--faint); font-style: italic; }
+.prose .highlight .k,
+.prose .highlight .kd,
+.prose .highlight .kn,
+.prose .highlight .kr { color: var(--a2); }
+.prose .highlight .s,
+.prose .highlight .s1,
+.prose .highlight .s2,
+.prose .highlight .se { color: var(--a1); }
+.prose .highlight .nf,
+.prose .highlight .nx { color: var(--text); }
+.prose .highlight .mi,
+.prose .highlight .mf,
+.prose .highlight .kc { color: #f0a868; }
+.prose .highlight .nt { color: var(--a2); }
+.prose .highlight .na { color: var(--a1); }
+.prose .highlight .p,
+.prose .highlight .o { color: var(--muted); }
+
+/* ---------- post footer ---------- */
+
+.post__foot {
+  margin-top: 52px;
+  padding-top: 30px;
+  border-top: 1px solid var(--border);
+}
+
+.post__share {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 11px;
+  margin-bottom: 34px;
+}
+.post__share .mono { margin-right: 4px; color: var(--faint); }
+
+.post__nav {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  gap: 12px;
+}
+
+.post__nav-link {
+  display: grid;
+  gap: 5px;
+  padding: 17px 20px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  background: var(--surface);
+  transition: border-color .25s var(--ease), transform .25s var(--ease);
+}
+.post__nav-link:hover { border-color: var(--a1); transform: translateY(-2px); }
+.post__nav-link .mono { font-size: 10.5px; text-transform: uppercase; letter-spacing: .1em; color: var(--faint); }
+.post__nav-link strong { font-size: 14.5px; font-weight: 600; line-height: 1.4; }
+.post__nav-link--right { text-align: right; }
+
+/* ---------- responsive ---------- */
+
+@media (max-width: 620px) {
+  .post-list-section,
+  .post { padding-block: 100px 60px; }
+
+  .post-card { padding: 22px 20px; }
+  .post-card:hover { transform: none; }
+
+  .prose { font-size: 16px; }
+  .post__nav-link--right { text-align: left; }
+}

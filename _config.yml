@@ -1,0 +1,66 @@
+# ---------------------------------------------------------------
+# Jekyll configuration
+#
+# GitHub Pages runs Jekyll automatically on this repo. Files without
+# YAML front matter (index.html, styles/, js/, images/) are copied
+# through untouched — only _posts, _layouts and pages with front
+# matter get processed.
+#
+# After editing this file you must restart `bundle exec jekyll serve`;
+# it is the one file that is not hot-reloaded.
+# ---------------------------------------------------------------
+
+title: Ayoub EL HASSANI
+tagline: Backend, distributed systems and the data underneath
+description: >-
+  Notes on backend engineering, distributed systems and data at scale —
+  Node.js, TypeScript, NestJS, Elasticsearch and the things that break
+  when the dataset stops being small.
+
+url: https://ayoubelhassani.me
+baseurl: ""
+
+author:
+  name: Ayoub EL HASSANI
+  email: ayelhassani@gmail.com
+
+github_username: ayoublind
+linkedin_url: https://www.linkedin.com/in/ayoub-el-hassani-a319a2b9/
+x_username: ayoub_el14430
+
+# Posts live at /blog/<slug>/ so the listing page at /blog/ owns the section.
+permalink: /blog/:title/
+
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
+
+# jekyll-feed publishes /feed.xml by default — do not set feed.path unless you
+# want it somewhere else, since it changes the output location rather than
+# confirming the default.
+
+# Markdown / syntax highlighting
+markdown: kramdown
+highlighter: rouge
+kramdown:
+  input: GFM
+  syntax_highlighter: rouge
+  syntax_highlighter_opts:
+    block:
+      line_numbers: false
+
+defaults:
+  - scope:
+      path: ""
+      type: posts
+    values:
+      layout: post
+
+# Keep build and tooling files out of the published site.
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - vendor
+  - README.md
+  - WRITING.md
+  - .gitignore

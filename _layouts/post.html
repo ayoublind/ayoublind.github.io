@@ -1,0 +1,81 @@
+---
+layout: default
+---
+
+<article class="post">
+  <div class="wrap wrap--prose">
+
+    <header class="post__head reveal">
+      <a class="post__back mono" href="{{ '/blog/' | relative_url }}">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M19 12H6M11.5 5.5 5 12l6.5 6.5"/></svg>
+        All writing
+      </a>
+
+      {% if page.draft %}
+        <p class="post__draft-note">
+          <span class="tag tag--draft">Draft</span>
+          This post is unpublished. Remove <code>draft: true</code> from the front matter when it is ready.
+        </p>
+      {% endif %}
+
+      <h1 class="post__title">{{ page.title }}</h1>
+
+      {% if page.description %}
+        <p class="post__standfirst">{{ page.description }}</p>
+      {% endif %}
+
+      <div class="post__meta">
+        <time class="mono" datetime="{{ page.date | date_to_xmlschema }}">
+          {{ page.date | date: "%B %-d, %Y" }}
+        </time>
+        <span class="mono">·</span>
+        <span class="mono">{{ content | number_of_words | divided_by: 200 | plus: 1 }} min read</span>
+      </div>
+
+      {% if page.tags.size > 0 %}
+        <ul class="chips chips--sm post__tags">
+          {% for tag in page.tags %}<li class="chip">{{ tag }}</li>{% endfor %}
+        </ul>
+      {% endif %}
+    </header>
+
+    <div class="prose reveal">
+      {{ content }}
+    </div>
+
+    <footer class="post__foot reveal">
+      <div class="post__share">
+        <span class="mono">Found this useful?</span>
+        <a class="btn btn--ghost btn--sm"
+           href="https://x.com/intent/tweet?text={{ page.title | uri_escape }}&url={{ page.url | absolute_url | uri_escape }}"
+           target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" aria-hidden="true" class="icon-fill"><path d="M17.2 3h3.3l-7.2 8.24L21.8 21h-6.6l-4.3-5.6L5.9 21H2.6l7.7-8.8L2.3 3h6.8l3.9 5.15L17.2 3Zm-1.16 16.03h1.83L7.8 4.87H5.84l10.2 14.16Z"/></svg>
+          Share on X
+        </a>
+        <a class="btn btn--ghost btn--sm" href="mailto:{{ site.author.email }}?subject={{ page.title | uri_escape }}">
+          Reply by email
+        </a>
+      </div>
+
+      {% assign prev = page.previous %}
+      {% assign next = page.next %}
+      {% if prev or next %}
+        <nav class="post__nav" aria-label="More posts">
+          {% if next %}
+            <a class="post__nav-link" href="{{ next.url | relative_url }}">
+              <span class="mono">Newer</span>
+              <strong>{{ next.title }}</strong>
+            </a>
+          {% endif %}
+          {% if prev %}
+            <a class="post__nav-link post__nav-link--right" href="{{ prev.url | relative_url }}">
+              <span class="mono">Older</span>
+              <strong>{{ prev.title }}</strong>
+            </a>
+          {% endif %}
+        </nav>
+      {% endif %}
+    </footer>
+
+  </div>
+</article>

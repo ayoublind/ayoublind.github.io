@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#08090c">
+
+  <link rel="shortcut icon" href="{{ '/favicon.jpg' | relative_url }}">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+  <link href="{{ '/styles/main.css' | relative_url }}" rel="stylesheet">
+  <link href="{{ '/styles/blog.css' | relative_url }}" rel="stylesheet">
+
+  <script>
+    // Apply the stored theme before first paint to avoid a flash of the wrong palette.
+    (function () {
+      try {
+        var t = localStorage.getItem('theme');
+        if (t === 'light' || t === 'dark') document.documentElement.setAttribute('data-theme', t);
+      } catch (e) { /* storage unavailable */ }
+    })();
+  </script>
+
+  {%- seo -%}
+  {%- feed_meta -%}
+</head>
+
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <div class="scroll-progress" aria-hidden="true"><span id="scrollBar"></span></div>
+
+  <div class="backdrop" aria-hidden="true">
+    <div class="backdrop__grid"></div>
+    <div class="backdrop__glow backdrop__glow--a"></div>
+    <div class="backdrop__glow backdrop__glow--b"></div>
+  </div>
+
+  <header class="nav" id="nav">
+    <div class="nav__inner">
+      <a class="brand" href="{{ '/' | relative_url }}" aria-label="Ayoub EL HASSANI — home">
+        <span class="brand__mark">AEH</span>
+        <span class="brand__text">Ayoub EL HASSANI</span>
+      </a>
+
+      <nav class="nav__links" id="navLinks" aria-label="Section navigation">
+        <a href="{{ '/#about' | relative_url }}">About</a>
+        <a href="{{ '/#work' | relative_url }}">What I do</a>
+        <a href="{{ '/#stack' | relative_url }}">Stack</a>
+        <a href="{{ '/#experience' | relative_url }}">Experience</a>
+        <a href="{{ '/blog/' | relative_url }}" class="is-active">Writing</a>
+        <a href="{{ '/#contact' | relative_url }}">Contact</a>
+      </nav>
+
+      <div class="nav__actions">
+        <button class="icon-btn" id="themeToggle" type="button" aria-label="Switch colour theme">
+          <svg class="icon-sun" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4.2"/><path d="M12 2.2v2.4M12 19.4v2.4M4.6 4.6l1.7 1.7M17.7 17.7l1.7 1.7M2.2 12h2.4M19.4 12h2.4M4.6 19.4l1.7-1.7M17.7 6.3l1.7-1.7"/></svg>
+          <svg class="icon-moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 14.2A8.2 8.2 0 0 1 9.8 4a8.2 8.2 0 1 0 10.2 10.2Z"/></svg>
+        </button>
+        <a class="btn btn--sm btn--primary nav__cta" href="{{ '/#contact' | relative_url }}">Get in touch</a>
+        <button class="icon-btn nav__burger" id="burger" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="navLinks">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main id="main">
+    {{ content }}
+  </main>
+
+  <footer class="footer">
+    <div class="wrap footer__inner">
+      <div class="footer__brand">
+        <span class="brand__mark">AEH</span>
+        <div>
+          <strong>Ayoub EL HASSANI</strong>
+          <span>Senior Software Engineer · Backend &amp; Distributed Systems</span>
+        </div>
+      </div>
+
+      <nav class="footer__social" aria-label="Social links">
+        <a href="https://github.com/{{ site.github_username }}" target="_blank" rel="noopener" aria-label="GitHub">
+          <svg viewBox="0 0 24 24" aria-hidden="true" class="icon-fill"><path d="M12 1.8a10.2 10.2 0 0 0-3.23 19.88c.51.1.7-.22.7-.49v-1.9c-2.84.62-3.44-1.2-3.44-1.2-.47-1.19-1.14-1.5-1.14-1.5-.93-.63.07-.62.07-.62 1.03.07 1.57 1.06 1.57 1.06.91 1.57 2.4 1.12 2.99.86.09-.66.36-1.12.65-1.38-2.27-.26-4.66-1.14-4.66-5.06 0-1.12.4-2.03 1.05-2.75-.1-.26-.45-1.3.1-2.71 0 0 .86-.28 2.81 1.05a9.7 9.7 0 0 1 5.12 0c1.95-1.33 2.81-1.05 2.81-1.05.55 1.41.2 2.45.1 2.71.65.72 1.05 1.63 1.05 2.75 0 3.93-2.39 4.8-4.67 5.05.37.32.7.94.7 1.9v2.81c0 .27.18.6.7.49A10.2 10.2 0 0 0 12 1.8Z"/></svg>
+        </a>
+        <a href="{{ site.linkedin_url }}" target="_blank" rel="noopener" aria-label="LinkedIn">
+          <svg viewBox="0 0 24 24" aria-hidden="true" class="icon-fill"><path d="M4.98 3.5a2.5 2.5 0 1 0 0 5 2.5 2.5 0 0 0 0-5ZM3 9.5h4v11H3v-11Zm6.5 0h3.8v1.5h.05c.53-.95 1.83-1.95 3.76-1.95 4.02 0 4.76 2.5 4.76 5.76v5.69h-4v-5.05c0-1.2-.02-2.75-1.7-2.75-1.7 0-1.96 1.3-1.96 2.66v5.14h-3.7v-11Z"/></svg>
+        </a>
+        <a href="https://x.com/{{ site.x_username }}" target="_blank" rel="noopener" aria-label="X">
+          <svg viewBox="0 0 24 24" aria-hidden="true" class="icon-fill"><path d="M17.2 3h3.3l-7.2 8.24L21.8 21h-6.6l-4.3-5.6L5.9 21H2.6l7.7-8.8L2.3 3h6.8l3.9 5.15L17.2 3Zm-1.16 16.03h1.83L7.8 4.87H5.84l10.2 14.16Z"/></svg>
+        </a>
+        <a href="{{ '/feed.xml' | relative_url }}" aria-label="RSS feed">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 11.5a7.5 7.5 0 0 1 7.5 7.5M5 5a14 14 0 0 1 14 14"/><circle cx="5.6" cy="18.4" r="1.6" fill="currentColor" stroke="none"/></svg>
+        </a>
+        <a href="mailto:{{ site.author.email }}" aria-label="Email">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="2.8" y="4.8" width="18.4" height="14.4" rx="2.4"/><path d="m3.6 7 8.4 6 8.4-6"/></svg>
+        </a>
+      </nav>
+
+      <p class="footer__copy mono">
+        &copy; <span id="year">{{ 'now' | date: "%Y" }}</span> Ayoub EL HASSANI · Built from scratch
+      </p>
+    </div>
+  </footer>
+
+  <script src="{{ '/scripts/main.js' | relative_url }}"></script>
+</body>
+
+</html>
